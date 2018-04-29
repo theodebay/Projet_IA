@@ -1,0 +1,10 @@
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\bin\Debug\ProjetIA.exe.config
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\bin\Debug\ProjetIA.exe
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\bin\Debug\ProjetIA.pdb
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\obj\Debug\ProjetIA.csprojResolveAssemblyReference.cache
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\obj\Debug\ProjetIA.Form1.resources
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\obj\Debug\ProjetIA.Properties.Resources.resources
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\obj\Debug\ProjetIA.csproj.GenerateResource.Cache
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\obj\Debug\ProjetIA.csproj.CoreCompileInputs.cache
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\obj\Debug\ProjetIA.exe
+C:\Users\debay\Desktop\Projet_ia\ProjetIA\obj\Debug\ProjetIA.pdb
