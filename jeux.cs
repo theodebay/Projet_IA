@@ -123,7 +123,7 @@ namespace ProjetIA
                     if (f.value[2] != m.health.ToString())
                     {
                         int val = -(m.health - Int32.Parse(f.value[2]));
-                        BattleInfo.Text += "Monster " + m.id + " received " + val + " HP\n";
+                        BattleInfo.Text += "Monster " + m.id + " received " + val + " HP (from "+m.health+" to "+f.value[2]+" HP)\n";
 
                         if (Int32.Parse(f.value[2]) <= 0)
                         {

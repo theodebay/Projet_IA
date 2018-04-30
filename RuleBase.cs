@@ -29,6 +29,12 @@ namespace ProjetIA
                     rule.Fire(kb);
                 }
             }
+
+            // Reset variables
+            foreach (Rule rule in rules)
+            {
+                rule.Reset();
+            }
         }
     }
 }

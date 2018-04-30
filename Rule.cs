@@ -83,5 +83,10 @@ namespace ProjetIA
         {
             return this.name + ": " + this.expression;
         }
+
+        public void Reset()
+        {
+            this.variables = new Dictionary<string, string>();
+        }
     }
 }
