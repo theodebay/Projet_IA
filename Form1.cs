@@ -15,6 +15,7 @@ namespace ProjetIA
         MonsterFactory monsterFactory;
         PlayerFactory playerFactory;
         Traitement_String traitement_String;
+        InferenceEngine engine;
         int nbMonster;
         public Form1()
         {
@@ -22,6 +23,9 @@ namespace ProjetIA
             monsterFactory = new MonsterFactory();
             playerFactory = new PlayerFactory();
             traitement_String = new Traitement_String();
+            engine = new InferenceEngine();
+
+            engine = engine.InitRules(engine);
             nbMonster = 0;
         }
 
@@ -31,6 +35,7 @@ namespace ProjetIA
             Console.WriteLine("Monster created with id" + id);
             nbMonster++;
             MonsterNumber.Text = Convert.ToString(nbMonster);
+
         }
 
         private void doAction_Click(object sender, EventArgs e)
@@ -38,8 +43,34 @@ namespace ProjetIA
             string keyword = traitement_String.findWeapon(PlayerAction.Text);
             if(keyword == null)
             {
-                BattleInfo.Text = "Action Impossible";
+                BattleInfo.Text = "Weapon missing";
             }
+            else
+            {
+                engine.AddFact("weapon " + keyword);
+            }
+
+            string action = traitement_String.findAction(PlayerAction.Text);
+            if (action == null)
+            {
+                BattleInfo.Text = "Action impossible";
+                engine.AddFact("action " + keyword);
+            }
+
+            Monster monster = traitement_String.findMonster(PlayerAction.Text, monsterFactory);
+
+            Player player = traitement_String.findPlayer(PlayerAction.Text, playerFactory);
+
+            string monster_fact = monster.toFact();
+            string player_fact = player.toFact();
+
+            engine.AddFact(monster_fact);
+            engine.AddFact(player_fact);
+
+            engine.TestAndFire();
+
+
+
         }
 
         private void AddPlayer_Click(object sender, EventArgs e)

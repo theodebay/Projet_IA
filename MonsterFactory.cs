@@ -23,5 +23,10 @@ namespace ProjetIA
             count++;
             return count;
         }
-    }
+
+        public List<Monster> getList()
+        {
+            return monsters;
+        }
+     }
 }

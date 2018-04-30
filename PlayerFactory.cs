@@ -19,5 +19,10 @@ namespace ProjetIA
         {
             players.Add(new Player(name, health, diceMelee, armor, diceDst, baseDmgMelee, baseDmgDst));
         }
+
+        public List<Player> getList()
+        {
+            return players;
+        }
     }
 }

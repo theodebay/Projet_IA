@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace InferenceEngine
+namespace ProjetIA
 {
     internal class RuleBase
     {

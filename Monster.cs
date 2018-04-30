@@ -29,11 +29,15 @@ namespace ProjetIA
             this.diceDst = diceDst;
         }
 
-        public void Takedamage(int damage)
+        public string toFact()
         {
-            health = health - damage;
+            string fact = ("monster " + id + health + armor + diceMelee + baseDmgMelee + "2d8" + diceDst + baseDmgDst + "2d4");
+            return fact;
         }
 
-        
+        public string getStringId()
+        {
+            return Convert.ToString(id);
+        }
     }
 }
