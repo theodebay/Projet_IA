@@ -30,7 +30,7 @@ namespace ProjetIA
 
         public string toFact()
         {
-            string fact = ("player " + name + health + armor + diceMelee + baseDmgMelee + "2d8" + diceDst + baseDmgDst + "2d4");
+            string fact = ("player " + name + " " + health + " " + armor + " " + diceMelee + " " + baseDmgMelee + " " + "2d8 " + diceDst + " " + baseDmgDst + " " + "2d4");
             return fact;
         }
 

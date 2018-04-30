@@ -75,12 +75,5 @@ namespace ProjetIA
             return engine;
         }
 
-        public InferenceEngine CreateFact(string fact, InferenceEngine engine)
-        {
-
-
-            return engine;
-        }
-
     }
 }

@@ -31,13 +31,14 @@ namespace ProjetIA
 
         public string toFact()
         {
-            string fact = ("monster " + id + health + armor + diceMelee + baseDmgMelee + "2d8" + diceDst + baseDmgDst + "2d4");
+            string fact = ("monster " + id + " " + health + " " + armor + " " + diceMelee + " " + baseDmgMelee + " " + "2d8 " + diceDst + " " + baseDmgDst + " " + "2d4");
+            Console.WriteLine(fact);
             return fact;
         }
 
         public string getStringId()
         {
-            return Convert.ToString(id);
+            return Convert.ToString(id + 1);
         }
     }
 }
