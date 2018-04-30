@@ -36,9 +36,15 @@ namespace ProjetIA
             return fact;
         }
 
-        public string getStringId()
+        public string getStringNumber()
         {
             return Convert.ToString(id + 1);
         }
+        
+        public string getStringId()
+        {
+            return Convert.ToString(id);
+        }
+
     }
 }

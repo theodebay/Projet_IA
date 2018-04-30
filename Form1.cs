@@ -36,12 +36,46 @@ namespace ProjetIA
             nbMonster++;
             MonsterNumber.Text = Convert.ToString(nbMonster);
 
+            
         }
 
         private void doAction_Click(object sender, EventArgs e)
         {
+
+            string attacker = traitement_String.from(PlayerAction.Text, playerFactory, monsterFactory);
+            if(attacker == null)
+            {
+                BattleInfo.Text = "Can't find attacker";
+            }
+            else
+            {
+                engine.AddFact("from " + attacker);
+            }
+
+            string defender = traitement_String.to(PlayerAction.Text, playerFactory, monsterFactory);
+            if (attacker == null)
+            {
+                BattleInfo.Text = "Can't find defender";
+            }
+            else
+            {
+                engine.AddFact("to " + defender);
+            }
+
+           
+
+            string action = traitement_String.findAction(PlayerAction.Text);
+            if (action == null)
+            {
+                BattleInfo.Text = "Action impossible";
+            }
+            else
+            {
+                engine.AddFact("action " + action);
+            }
+
             string keyword = traitement_String.findWeapon(PlayerAction.Text);
-            if(keyword == null)
+            if (keyword == null)
             {
                 BattleInfo.Text = "Weapon missing";
             }
@@ -50,21 +84,12 @@ namespace ProjetIA
                 engine.AddFact("weapon " + keyword);
             }
 
-            string action = traitement_String.findAction(PlayerAction.Text);
-            if (action == null)
-            {
-                BattleInfo.Text = "Action impossible";
-                engine.AddFact("action " + keyword);
-            }
-
             Monster monster = traitement_String.findMonster(PlayerAction.Text, monsterFactory);
+            string monster_fact = monster.toFact();
+            engine.AddFact(monster_fact);
 
             Player player = traitement_String.findPlayer(PlayerAction.Text, playerFactory);
-
-            string monster_fact = monster.toFact();
             string player_fact = player.toFact();
-
-            engine.AddFact(monster_fact);
             engine.AddFact(player_fact);
 
             engine.TestAndFire();
@@ -76,6 +101,8 @@ namespace ProjetIA
         private void AddPlayer_Click(object sender, EventArgs e)
         {
             playerFactory.addPlayer(PlayerName.Text, Decimal.ToInt32(playerHp.Value), Decimal.ToInt32(Playerdmg.Value), Decimal.ToInt32(PlayerArmor.Value), Decimal.ToInt32(PlayerAgility.Value), Decimal.ToInt32(PlayerMeleeDmg.Value), Decimal.ToInt32(PlayerDistDmg.Value));
+
+            
         }
     }
 }

@@ -28,51 +28,51 @@ namespace ProjetIA
                 {
                     case "shortbow":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "bow":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "crossbow":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "longbow":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "throwingAxe":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "spear":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "sword":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "greatSword":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "axe":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "doubleAxe":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "daggers":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     case "hammer":
                         keyword = word;
-                        break;
+                        return keyword;
 
                     default:
                         keyword = null;
@@ -94,19 +94,19 @@ namespace ProjetIA
                 {
                     case "attack":
                         action = word;
-                        break;
+                        return action;
 
                     case "shoot":
                         action = word;
-                        break;
+                        return action;
 
                     case "heal":
                         action = word;
-                        break;
+                        return action;
 
                     case "cure":
                         action = word;
-                        break;
+                        return action;
 
                     default:
                         action = null;
@@ -128,7 +128,7 @@ namespace ProjetIA
             {
                 for (int i = 0; i<monsters.Count(); i++)
                 {
-                    if (word == monsters.ElementAt(i).getStringId())
+                    if (word == monsters.ElementAt(i).getStringNumber())
                     {
                         monster_find = monsters.ElementAt(i);
                         return monster_find;
@@ -160,5 +160,77 @@ namespace ProjetIA
 
             return null;
         }
+        public string from(string text, PlayerFactory player_factory, MonsterFactory monster_factory)
+        {
+            string attacker;
+
+            List<Monster> monsters = monster_factory.getList();
+            List<Player> players = player_factory.getList();
+            string[] words = text.Split(' ');
+
+            foreach (string word in words)
+            {
+                for (int i = 0; i < players.Count(); i++)
+                {
+                    if (word == players.ElementAt(i).getName())
+                    {
+                        attacker = players.ElementAt(i).getName();
+                        return attacker;
+                    }
+                }
+                for(int i = 0; i < monsters.Count(); i++)
+                {
+                    if (word == monsters.ElementAt(i).getStringId())
+                    {
+                        attacker = monsters.ElementAt(i).getStringId();
+                        return attacker;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public string to(string text, PlayerFactory player_factory, MonsterFactory monster_factory)
+        {
+            string defender;
+            int from = 0;
+            List<Monster> monsters = monster_factory.getList();
+            List<Player> players = player_factory.getList();
+            string[] words = text.Split(' ');
+
+            foreach (string word in words)
+            {
+                for (int i = 0; i < players.Count(); i++)
+                {
+                    if (word == players.ElementAt(i).getName())
+                    {
+                        from ++;
+                    }
+                    else if (word == players.ElementAt(i).getName() && from > 0)
+                    {
+                        defender = players.ElementAt(i).getName();
+                        return defender;
+                    }
+                    
+                }
+
+                for(int i = 0; i < players.Count(); i++)
+                {
+                    if (word == monsters.ElementAt(i).getStringId())
+                    {
+                        from++;
+                    }
+                    else if (word == monsters.ElementAt(i).getStringNumber() && from > 0)
+                    {
+                        defender = monsters.ElementAt(i).getStringId();
+                        return defender;
+                    }
+                }
+            }
+
+            return null;
+        }
     }
+  
 }
