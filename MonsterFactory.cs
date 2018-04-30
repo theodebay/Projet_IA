@@ -21,9 +21,10 @@ namespace ProjetIA
 
         public int addMonster(int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
         {
+            count++;
             Monster m = new Monster(count.ToString(), health, attack, armor, agility, baseDmgMelee, baseDmgDst);
             monsters.Add(m);
-            count++;
+            
             this.kb.AddFact("f" + (kb.count + 1) + " " + m.toFact());
             return count;
         }
