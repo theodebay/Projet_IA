@@ -204,7 +204,7 @@ namespace ProjetIA
             {
                 for (int i = 0; i < players.Count(); i++)
                 {
-                    if (word == players.ElementAt(i).getName())
+                    if (word == players.ElementAt(i).getName() && from < 1)
                     {
                         from ++;
                     }
@@ -218,7 +218,7 @@ namespace ProjetIA
 
                 for(int i = 0; i < players.Count(); i++)
                 {
-                    if (word == monsters.ElementAt(i).getStringNumber())
+                    if (word == monsters.ElementAt(i).getStringNumber() && from < 1)
                     {
                         from++;
                     }

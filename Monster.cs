@@ -10,7 +10,7 @@ namespace ProjetIA
     {
         public int health;
 
-        private string id;
+        public string id;
         private int armor;
         private int baseDmgMelee;
         private int attack;
@@ -44,6 +44,11 @@ namespace ProjetIA
         public string getStringId()
         {
             return Convert.ToString(id);
+        }
+
+        public override string ToString()
+        {
+            return "monstre" + id + ": " + health;
         }
 
     }

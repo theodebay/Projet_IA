@@ -38,5 +38,10 @@ namespace ProjetIA
         {
             return name;
         }
+
+        public override string ToString()
+        {
+            return "Player " + name;
+        }
     }
 }

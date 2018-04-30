@@ -28,6 +28,11 @@ namespace ProjetIA
             this.ruleBase.TestAndFire(knowledgeBase);
             System.Diagnostics.Debug.WriteLine("\n------------------------------------CLEAN UP-------------------------------------");
             this.knowledgeBase.CleanTempFacts();
+            System.Diagnostics.Debug.WriteLine("\n------------------------------------CHECK UP-------------------------------------");
+            foreach(Fact f in this.knowledgeBase.facts)
+            {
+                System.Diagnostics.Debug.WriteLine(f.ToString());
+            }
         }
 
 

@@ -33,5 +33,22 @@ namespace ProjetIA
         {
             return monsters;
         }
-     }
+
+        public Monster getById(string id)
+        {
+            foreach (Monster m in monsters)
+            {
+                if (m.id == id)
+                {
+                    return m;
+                }
+            }
+            return null;
+        }
+
+        internal void removeMonster(Monster m)
+        {
+            this.monsters.Remove(m);
+        }
+    }
 }

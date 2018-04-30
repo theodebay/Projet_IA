@@ -28,5 +28,22 @@ namespace ProjetIA
         {
             return players;
         }
+
+        public Player getById(string id)
+        {
+            foreach (Player p in players)
+            {
+                if (p.name == id)
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        internal void removePlayer(Player p)
+        {
+            this.players.Remove(p);
+        }
     }
 }

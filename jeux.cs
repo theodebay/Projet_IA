@@ -27,12 +27,15 @@ namespace ProjetIA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("\n-------------------------------------REQUEST--------------------------------------");
+            bool ok = true;
 
             // Find the attacker
             string attacker = traitement_String.from(PlayerAction.Text, playerFactory, monsterFactory);
             if (attacker == null)
             {
                 BattleInfo.Text = "Can't find attacker";
+                ok = false;
             }
             else
             {
@@ -45,6 +48,7 @@ namespace ProjetIA
             if (attacker == null)
             {
                 BattleInfo.Text = "Can't find defender";
+                ok = false;
             }
             else
             {
@@ -57,6 +61,7 @@ namespace ProjetIA
             if (action == null)
             {
                 BattleInfo.Text = "Action impossible";
+                ok = false;
             }
             else
             {
@@ -68,6 +73,7 @@ namespace ProjetIA
             if (keyword == null)
             {
                 BattleInfo.Text = "Weapon missing";
+                ok = false;
             }
             else
             {
@@ -75,10 +81,73 @@ namespace ProjetIA
             }
 
 
-            engine.TestAndFire();
+            if (ok)
+            {
+                engine.TestAndFire();
+                updateEntities(BattleInfo);
+            }
 
 
 
+        }
+
+        private void updateEntities(RichTextBox battleInfo)
+        {
+            foreach (Fact f in engine.knowledgeBase.facts)
+            {
+                Monster m = monsterFactory.getById(f.value[1]);
+                Player p = playerFactory.getById(f.value[1]);
+
+                if (m == null)
+                {
+                    // Player has been updated ?
+                    if (f.value[2] != p.health.ToString())
+                    {
+                        int val = -(p.health - Int32.Parse(f.value[2]));
+                        BattleInfo.Text += "Player " + p.name + " received " + val + " HP\n";
+
+                        if (Int32.Parse(f.value[2]) <= 0)
+                        {
+                            BattleInfo.Text += "Player " + p.name + " has been slain\n";
+                            playerFactory.removePlayer(p);
+                        }
+                        else
+                        {
+                            p.health = Int32.Parse(f.value[2]);
+                        }
+                    }
+                }
+                else
+                {
+                    // Monster has been updated ?
+                    if (f.value[2] != m.health.ToString())
+                    {
+                        int val = -(m.health - Int32.Parse(f.value[2]));
+                        BattleInfo.Text += "Monster " + m.id + " received " + val + " HP\n";
+
+                        if (Int32.Parse(f.value[2]) <= 0)
+                        {
+                            BattleInfo.Text += "Monster " + m.id + " has been slain\n";
+                            monsterFactory.removeMonster(m);
+                        }
+                        else
+                        {
+                            m.health = Int32.Parse(f.value[2]);
+                        }
+                    }
+                }
+            }
+            /*
+            BattleInfo.Text += "--------------------"+ "\n";
+            foreach (Monster m in monsterFactory.getList())
+            {
+                BattleInfo.Text += m.ToString() + "\n";
+            }
+            foreach (Player m in playerFactory.getList())
+            {
+                BattleInfo.Text += m.ToString() + "\n";
+            }
+            */
         }
     }
 }
