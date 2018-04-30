@@ -38,6 +38,7 @@ namespace ProjetIA
         {
             int id = monsterFactory.addMonster(Decimal.ToInt32(monsterHealth.Value), Decimal.ToInt32(monsterAttack.Value), Decimal.ToInt32(monsterArmor.Value), Decimal.ToInt32(monsterAgility.Value), Decimal.ToInt32(monsterMeleeDamage.Value), Decimal.ToInt32(monsterDistDamage.Value));
             //Console.WriteLine("Monster created with id" + id);
+            System.Windows.Forms.MessageBox.Show("Monster added !");
             nbMonster++;
             MonsterNumber.Text = Convert.ToString(nbMonster);
 
@@ -103,7 +104,7 @@ namespace ProjetIA
         private void AddPlayer_Click(object sender, EventArgs e)
         {
             playerFactory.addPlayer(PlayerName.Text, Decimal.ToInt32(playerHp.Value), Decimal.ToInt32(Playerdmg.Value), Decimal.ToInt32(PlayerArmor.Value), Decimal.ToInt32(PlayerAgility.Value), Decimal.ToInt32(PlayerMeleeDmg.Value), Decimal.ToInt32(PlayerDistDmg.Value));
-
+            System.Windows.Forms.MessageBox.Show("Player added !");
         }
 
        
