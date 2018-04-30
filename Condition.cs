@@ -133,6 +133,7 @@ namespace ProjetIA
                     int valTest = 0;
                     foreach (Fact f in kb.facts)
                     {
+                        Console.WriteLine(f.ToString());
                         if (f.value[0].Equals("test"))
                         {
                             valTest = Int32.Parse(f.value[1]);

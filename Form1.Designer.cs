@@ -44,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.MonsterNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.doAction = new System.Windows.Forms.Button();
             this.PlayerAgility = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.PlayerDistDmg = new System.Windows.Forms.NumericUpDown();
@@ -62,8 +61,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.PlayerName = new System.Windows.Forms.TextBox();
             this.BattleBegin = new System.Windows.Forms.Button();
-            this.Monster_List = new System.Windows.Forms.RichTextBox();
-            this.PlayerList = new System.Windows.Forms.RichTextBox();
+            this.Monsterbox = new System.Windows.Forms.RichTextBox();
+            this.PlayerBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.monsterHealth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monsterAttack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monsterArmor)).BeginInit();
@@ -218,13 +217,6 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "MonsterNumber";
             // 
-            // doAction
-            // 
-            this.doAction.Location = new System.Drawing.Point(0, 0);
-            this.doAction.Name = "doAction";
-            this.doAction.Size = new System.Drawing.Size(75, 23);
-            this.doAction.TabIndex = 43;
-            // 
             // PlayerAgility
             // 
             this.PlayerAgility.Location = new System.Drawing.Point(621, 167);
@@ -375,29 +367,29 @@
             this.BattleBegin.UseVisualStyleBackColor = true;
             this.BattleBegin.Click += new System.EventHandler(this.BattleBegin_Click);
             // 
-            // Monster_List
+            // Monsterbox
             // 
-            this.Monster_List.Location = new System.Drawing.Point(13, 342);
-            this.Monster_List.Name = "Monster_List";
-            this.Monster_List.Size = new System.Drawing.Size(257, 187);
-            this.Monster_List.TabIndex = 45;
-            this.Monster_List.Text = "";
+            this.Monsterbox.Location = new System.Drawing.Point(13, 342);
+            this.Monsterbox.Name = "Monsterbox";
+            this.Monsterbox.Size = new System.Drawing.Size(257, 187);
+            this.Monsterbox.TabIndex = 45;
+            this.Monsterbox.Text = "";
             // 
-            // PlayerList
+            // PlayerBox
             // 
-            this.PlayerList.Location = new System.Drawing.Point(614, 342);
-            this.PlayerList.Name = "PlayerList";
-            this.PlayerList.Size = new System.Drawing.Size(257, 187);
-            this.PlayerList.TabIndex = 46;
-            this.PlayerList.Text = "";
+            this.PlayerBox.Location = new System.Drawing.Point(614, 342);
+            this.PlayerBox.Name = "PlayerBox";
+            this.PlayerBox.Size = new System.Drawing.Size(257, 187);
+            this.PlayerBox.TabIndex = 46;
+            this.PlayerBox.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 553);
-            this.Controls.Add(this.PlayerList);
-            this.Controls.Add(this.Monster_List);
+            this.Controls.Add(this.PlayerBox);
+            this.Controls.Add(this.Monsterbox);
             this.Controls.Add(this.BattleBegin);
             this.Controls.Add(this.PlayerName);
             this.Controls.Add(this.label13);
@@ -415,7 +407,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.AddPlayer);
-            this.Controls.Add(this.doAction);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.MonsterNumber);
             this.Controls.Add(this.monsterAgility);
@@ -470,7 +461,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox MonsterNumber;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button doAction;
         private System.Windows.Forms.NumericUpDown PlayerAgility;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown PlayerDistDmg;
@@ -488,8 +478,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox PlayerName;
         private System.Windows.Forms.Button BattleBegin;
-        private System.Windows.Forms.RichTextBox Monster_List;
-        private System.Windows.Forms.RichTextBox PlayerList;
+        private System.Windows.Forms.RichTextBox Monsterbox;
+        private System.Windows.Forms.RichTextBox PlayerBox;
     }
 }
 

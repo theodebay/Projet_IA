@@ -18,7 +18,8 @@ namespace ProjetIA
         InferenceEngine engine;
         int nbMonster;
 
-
+        string monster_list = "";
+        string player_list = "";
         public Form1()
         {
             InitializeComponent();
@@ -42,31 +43,36 @@ namespace ProjetIA
             nbMonster++;
             MonsterNumber.Text = Convert.ToString(nbMonster);
 
-            
+            List<Monster> monsters = monsterFactory.getList();
+            foreach(Monster monster in monsters)
+            {
+                string temps_monster = monster.toFact();
+                monster_list = monster_list + "\n" + temps_monster;
+            }
+
+            Monsterbox.Text = monster_list;
         }
 
         private void AddPlayer_Click(object sender, EventArgs e)
         {
             playerFactory.addPlayer(PlayerName.Text, Decimal.ToInt32(playerHp.Value), Decimal.ToInt32(Playerdmg.Value), Decimal.ToInt32(PlayerArmor.Value), Decimal.ToInt32(PlayerAgility.Value), Decimal.ToInt32(PlayerMeleeDmg.Value), Decimal.ToInt32(PlayerDistDmg.Value));
             System.Windows.Forms.MessageBox.Show("Player added !");
+
+            List<Player> players = playerFactory.getList();
+            foreach (Player player in players)
+            {
+                
+               string temps_player = player.toFact();
+               player_list = player_list + "\n" + temps_player;
+            }
+
+            PlayerBox.Text = player_list;
+            player_list = "";
         }
 
         private void BattleBegin_Click(object sender, EventArgs e)
         {
-            List<Monster> monsters = monsterFactory.getList();
-            List<Player> players = playerFactory.getList();
 
-            foreach(Monster monster in monsters)
-            {
-                string monster_temp = monster.ToString();
-                engine.AddFact(monster_temp);
-            }
-
-            foreach (Player player in players)
-            {
-                string player_temp = player.ToString();
-                engine.AddFact(player_temp);
-            }
             jeux form = new jeux(monsterFactory, playerFactory, engine);
             form.Show();
         }

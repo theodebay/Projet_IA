@@ -22,6 +22,7 @@ namespace ProjetIA
             this.monsterFactory = monsters;
             this.playerFactory = players;
             this.engine = curengine;
+            traitement_String = new Traitement_String();
         }
 
         private void button1_Click(object sender, EventArgs e)
