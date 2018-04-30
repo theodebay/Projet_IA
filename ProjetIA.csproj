@@ -55,6 +55,12 @@
     </Compile>
     <Compile Include="InferenceEngine.cs" />
     <Compile Include="InitEngine.cs" />
+    <Compile Include="jeux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jeux.Designer.cs">
+      <DependentUpon>jeux.cs</DependentUpon>
+    </Compile>
     <Compile Include="KnowledgeBase.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="MonsterFactory.cs" />
@@ -68,6 +74,9 @@
     <Compile Include="Traitement_String.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jeux.resx">
+      <DependentUpon>jeux.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
