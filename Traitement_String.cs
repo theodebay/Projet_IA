@@ -160,6 +160,7 @@ namespace ProjetIA
 
             return null;
         }
+
         public string from(string text, PlayerFactory player_factory, MonsterFactory monster_factory)
         {
             string attacker;

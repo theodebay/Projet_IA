@@ -10,35 +10,35 @@ namespace ProjetIA
     {
         public int health;
 
-        private int id;
+        private string id;
         private int armor;
         private int baseDmgMelee;
-        private int diceMelee;
+        private int attack;
         private int baseDmgDst;
-        private int diceDst;
+        private int agility;
 
-        public Monster(int id, int health, int diceMelee, int armor, int diceDst, int baseDmgMelee, int baseDmgDst)
+        public Monster(string id, int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
         {
             this.health = health;
 
             this.id = id;
             this.armor = armor;
             this.baseDmgMelee = baseDmgMelee;
-            this.diceMelee = diceMelee;
+            this.attack = attack;
             this.baseDmgDst = baseDmgDst;
-            this.diceDst = diceDst;
+            this.agility = agility;
         }
 
         public string toFact()
         {
-            string fact = ("monster " + id + " " + health + " " + armor + " " + diceMelee + " " + baseDmgMelee + " " + "2d8 " + diceDst + " " + baseDmgDst + " " + "2d4");
-            Console.WriteLine(fact);
+            string fact = ("monster " + id + " " + health + " " + armor + " " + attack + " " + baseDmgMelee + " " + "2d8 " + agility + " " + baseDmgDst + " " + "2d4");
+            //Console.WriteLine(fact);
             return fact;
         }
 
         public string getStringNumber()
         {
-            return Convert.ToString(id + 1);
+            return Convert.ToString(Int32.Parse(id) + 1);
         }
         
         public string getStringId()

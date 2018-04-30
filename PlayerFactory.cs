@@ -9,15 +9,19 @@ namespace ProjetIA
     class PlayerFactory
     {
         private List<Player> players;
+        private KnowledgeBase kb;
 
-        public PlayerFactory()
+        public PlayerFactory(KnowledgeBase kb)
         {
             players = new List<Player>();
+            this.kb = kb;
         }
 
-        public void addPlayer(string name, int health, int diceMelee, int armor, int diceDst, int baseDmgMelee, int baseDmgDst)
+        public void addPlayer(string name, int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
         {
-            players.Add(new Player(name, health, diceMelee, armor, diceDst, baseDmgMelee, baseDmgDst));
+            Player p = new Player(name, health, attack, armor, agility, baseDmgMelee, baseDmgDst);
+            players.Add(p);
+            this.kb.AddFact("f" + (kb.count + 1) + " " + p.toFact());
         }
 
         public List<Player> getList()

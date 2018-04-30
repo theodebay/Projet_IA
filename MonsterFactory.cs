@@ -10,17 +10,21 @@ namespace ProjetIA
     {
         private int count;
         private List<Monster> monsters;
+        private KnowledgeBase kb;
 
-        public MonsterFactory()
+        public MonsterFactory(KnowledgeBase kb)
         {
-            count = 0;
+            count = -1;
             monsters = new List<Monster>();
+            this.kb = kb;
         }
 
-        public int addMonster(int health, int diceMelee, int armor, int diceDst, int baseDmgMelee, int baseDmgDst)
+        public int addMonster(int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
         {
-            monsters.Add(new Monster(count, health, diceMelee, armor, diceDst, baseDmgMelee, baseDmgDst));
+            Monster m = new Monster(count.ToString(), health, attack, armor, agility, baseDmgMelee, baseDmgDst);
+            monsters.Add(m);
             count++;
+            this.kb.AddFact("f" + (kb.count + 1) + " " + m.toFact());
             return count;
         }
 

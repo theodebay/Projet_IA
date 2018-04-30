@@ -13,24 +13,24 @@ namespace ProjetIA
 
         private int armor;
         private int baseDmgMelee;
-        private int diceMelee;
+        private int attack;
         private int baseDmgDst;
-        private int diceDst;
+        private int agility;
 
-        public Player(string name,int health, int diceMelee, int armor, int diceDst, int baseDmgMelee, int baseDmgDst)
+        public Player(string name,int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
         {
             this.name = name;
             this.health = health;
             this.armor = armor;
             this.baseDmgMelee = baseDmgMelee;
-            this.diceMelee = diceMelee;
+            this.attack = attack;
             this.baseDmgDst = baseDmgDst;
-            this.diceDst = diceDst;
+            this.agility = agility;
         }
 
         public string toFact()
         {
-            string fact = ("player " + name + " " + health + " " + armor + " " + diceMelee + " " + baseDmgMelee + " " + "2d8 " + diceDst + " " + baseDmgDst + " " + "2d4");
+            string fact = ("monster " + name + " " + health + " " + armor + " " + attack + " " + baseDmgMelee + " " + "2d8 " + agility + " " + baseDmgDst + " " + "2d4");
             return fact;
         }
 

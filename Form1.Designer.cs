@@ -81,9 +81,10 @@
             // 
             // b_Addmonster
             // 
-            this.b_Addmonster.Location = new System.Drawing.Point(40, 251);
+            this.b_Addmonster.Location = new System.Drawing.Point(30, 204);
+            this.b_Addmonster.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b_Addmonster.Name = "b_Addmonster";
-            this.b_Addmonster.Size = new System.Drawing.Size(161, 34);
+            this.b_Addmonster.Size = new System.Drawing.Size(121, 28);
             this.b_Addmonster.TabIndex = 0;
             this.b_Addmonster.Text = "Add Monster";
             this.b_Addmonster.UseVisualStyleBackColor = true;
@@ -92,27 +93,30 @@
             // mHp
             // 
             this.mHp.AutoSize = true;
-            this.mHp.Location = new System.Drawing.Point(7, 61);
+            this.mHp.Location = new System.Drawing.Point(5, 50);
+            this.mHp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mHp.Name = "mHp";
-            this.mHp.Size = new System.Drawing.Size(27, 17);
+            this.mHp.Size = new System.Drawing.Size(22, 13);
             this.mHp.TabIndex = 5;
             this.mHp.Text = "HP";
             // 
             // mForce
             // 
             this.mForce.AutoSize = true;
-            this.mForce.Location = new System.Drawing.Point(7, 91);
+            this.mForce.Location = new System.Drawing.Point(5, 74);
+            this.mForce.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mForce.Name = "mForce";
-            this.mForce.Size = new System.Drawing.Size(47, 17);
+            this.mForce.Size = new System.Drawing.Size(38, 13);
             this.mForce.TabIndex = 6;
             this.mForce.Text = "Attack";
             // 
             // mAmor
             // 
             this.mAmor.AutoSize = true;
-            this.mAmor.Location = new System.Drawing.Point(7, 119);
+            this.mAmor.Location = new System.Drawing.Point(5, 97);
+            this.mAmor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mAmor.Name = "mAmor";
-            this.mAmor.Size = new System.Drawing.Size(46, 17);
+            this.mAmor.Size = new System.Drawing.Size(34, 13);
             this.mAmor.TabIndex = 7;
             this.mAmor.Text = "Armor";
             // 
@@ -120,94 +124,106 @@
             // 
             this.Addmonster.AutoSize = true;
             this.Addmonster.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.Addmonster.Location = new System.Drawing.Point(8, 10);
+            this.Addmonster.Location = new System.Drawing.Point(6, 8);
+            this.Addmonster.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Addmonster.Name = "Addmonster";
-            this.Addmonster.Size = new System.Drawing.Size(141, 26);
+            this.Addmonster.Size = new System.Drawing.Size(116, 22);
             this.Addmonster.TabIndex = 8;
             this.Addmonster.Text = "Add  Monster";
             // 
             // mDmgMelee
             // 
             this.mDmgMelee.AutoSize = true;
-            this.mDmgMelee.Location = new System.Drawing.Point(10, 174);
+            this.mDmgMelee.Location = new System.Drawing.Point(8, 141);
+            this.mDmgMelee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mDmgMelee.Name = "mDmgMelee";
-            this.mDmgMelee.Size = new System.Drawing.Size(128, 17);
+            this.mDmgMelee.Size = new System.Drawing.Size(99, 13);
             this.mDmgMelee.TabIndex = 9;
             this.mDmgMelee.Text = "MeleeWeaponDmg";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 200);
+            this.label2.Location = new System.Drawing.Point(8, 162);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
+            this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "DistWeaponDmg";
             // 
             // monsterHealth
             // 
-            this.monsterHealth.Location = new System.Drawing.Point(147, 56);
+            this.monsterHealth.Location = new System.Drawing.Point(110, 46);
+            this.monsterHealth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monsterHealth.Name = "monsterHealth";
-            this.monsterHealth.Size = new System.Drawing.Size(120, 22);
+            this.monsterHealth.Size = new System.Drawing.Size(90, 20);
             this.monsterHealth.TabIndex = 11;
             // 
             // monsterAttack
             // 
-            this.monsterAttack.Location = new System.Drawing.Point(147, 84);
+            this.monsterAttack.Location = new System.Drawing.Point(110, 68);
+            this.monsterAttack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monsterAttack.Name = "monsterAttack";
-            this.monsterAttack.Size = new System.Drawing.Size(120, 22);
+            this.monsterAttack.Size = new System.Drawing.Size(90, 20);
             this.monsterAttack.TabIndex = 12;
             // 
             // monsterArmor
             // 
-            this.monsterArmor.Location = new System.Drawing.Point(147, 112);
+            this.monsterArmor.Location = new System.Drawing.Point(110, 91);
+            this.monsterArmor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monsterArmor.Name = "monsterArmor";
-            this.monsterArmor.Size = new System.Drawing.Size(120, 22);
+            this.monsterArmor.Size = new System.Drawing.Size(90, 20);
             this.monsterArmor.TabIndex = 13;
             // 
             // monsterMeleeDamage
             // 
-            this.monsterMeleeDamage.Location = new System.Drawing.Point(147, 172);
+            this.monsterMeleeDamage.Location = new System.Drawing.Point(110, 140);
+            this.monsterMeleeDamage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monsterMeleeDamage.Name = "monsterMeleeDamage";
-            this.monsterMeleeDamage.Size = new System.Drawing.Size(120, 22);
+            this.monsterMeleeDamage.Size = new System.Drawing.Size(90, 20);
             this.monsterMeleeDamage.TabIndex = 14;
             // 
             // monsterDistDamage
             // 
-            this.monsterDistDamage.Location = new System.Drawing.Point(147, 200);
+            this.monsterDistDamage.Location = new System.Drawing.Point(110, 162);
+            this.monsterDistDamage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monsterDistDamage.Name = "monsterDistDamage";
-            this.monsterDistDamage.Size = new System.Drawing.Size(120, 22);
+            this.monsterDistDamage.Size = new System.Drawing.Size(90, 20);
             this.monsterDistDamage.TabIndex = 15;
             // 
             // monsterAgility
             // 
-            this.monsterAgility.Location = new System.Drawing.Point(147, 140);
+            this.monsterAgility.Location = new System.Drawing.Point(110, 114);
+            this.monsterAgility.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monsterAgility.Name = "monsterAgility";
-            this.monsterAgility.Size = new System.Drawing.Size(120, 22);
+            this.monsterAgility.Size = new System.Drawing.Size(90, 20);
             this.monsterAgility.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 147);
+            this.label1.Location = new System.Drawing.Point(5, 119);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 16;
             this.label1.Text = "Agility";
             // 
             // MonsterNumber
             // 
-            this.MonsterNumber.Location = new System.Drawing.Point(146, 295);
+            this.MonsterNumber.Location = new System.Drawing.Point(110, 240);
+            this.MonsterNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MonsterNumber.Name = "MonsterNumber";
-            this.MonsterNumber.Size = new System.Drawing.Size(120, 22);
+            this.MonsterNumber.Size = new System.Drawing.Size(91, 20);
             this.MonsterNumber.TabIndex = 18;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 298);
+            this.label3.Location = new System.Drawing.Point(9, 242);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 17);
+            this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "MonsterNumber";
             // 
@@ -215,25 +231,28 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label4.Location = new System.Drawing.Point(12, 351);
+            this.label4.Location = new System.Drawing.Point(9, 285);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 26);
+            this.label4.Size = new System.Drawing.Size(116, 22);
             this.label4.TabIndex = 22;
             this.label4.Text = "Player Action";
             // 
             // PlayerAction
             // 
-            this.PlayerAction.Location = new System.Drawing.Point(10, 392);
+            this.PlayerAction.Location = new System.Drawing.Point(8, 318);
+            this.PlayerAction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayerAction.Name = "PlayerAction";
-            this.PlayerAction.Size = new System.Drawing.Size(383, 149);
+            this.PlayerAction.Size = new System.Drawing.Size(288, 122);
             this.PlayerAction.TabIndex = 23;
             this.PlayerAction.Text = "";
             // 
             // BattleInfo
             // 
-            this.BattleInfo.Location = new System.Drawing.Point(487, 392);
+            this.BattleInfo.Location = new System.Drawing.Point(365, 318);
+            this.BattleInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BattleInfo.Name = "BattleInfo";
-            this.BattleInfo.Size = new System.Drawing.Size(383, 149);
+            this.BattleInfo.Size = new System.Drawing.Size(288, 122);
             this.BattleInfo.TabIndex = 24;
             this.BattleInfo.Text = "";
             // 
@@ -241,17 +260,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label5.Location = new System.Drawing.Point(482, 351);
+            this.label5.Location = new System.Drawing.Point(362, 285);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 26);
+            this.label5.Size = new System.Drawing.Size(90, 22);
             this.label5.TabIndex = 25;
             this.label5.Text = "Battle Info";
             // 
             // doAction
             // 
-            this.doAction.Location = new System.Drawing.Point(389, 450);
+            this.doAction.Location = new System.Drawing.Point(292, 366);
+            this.doAction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.doAction.Name = "doAction";
-            this.doAction.Size = new System.Drawing.Size(101, 39);
+            this.doAction.Size = new System.Drawing.Size(76, 32);
             this.doAction.TabIndex = 26;
             this.doAction.Text = "Do Action";
             this.doAction.UseVisualStyleBackColor = true;
@@ -259,70 +280,79 @@
             // 
             // PlayerAgility
             // 
-            this.PlayerAgility.Location = new System.Drawing.Point(621, 168);
+            this.PlayerAgility.Location = new System.Drawing.Point(466, 136);
+            this.PlayerAgility.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayerAgility.Name = "PlayerAgility";
-            this.PlayerAgility.Size = new System.Drawing.Size(120, 22);
+            this.PlayerAgility.Size = new System.Drawing.Size(90, 20);
             this.PlayerAgility.TabIndex = 40;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(481, 175);
+            this.label6.Location = new System.Drawing.Point(361, 142);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 17);
+            this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 39;
             this.label6.Text = "Agility";
             // 
             // PlayerDistDmg
             // 
-            this.PlayerDistDmg.Location = new System.Drawing.Point(621, 228);
+            this.PlayerDistDmg.Location = new System.Drawing.Point(466, 185);
+            this.PlayerDistDmg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayerDistDmg.Name = "PlayerDistDmg";
-            this.PlayerDistDmg.Size = new System.Drawing.Size(120, 22);
+            this.PlayerDistDmg.Size = new System.Drawing.Size(90, 20);
             this.PlayerDistDmg.TabIndex = 38;
             // 
             // PlayerMeleeDmg
             // 
-            this.PlayerMeleeDmg.Location = new System.Drawing.Point(621, 200);
+            this.PlayerMeleeDmg.Location = new System.Drawing.Point(466, 162);
+            this.PlayerMeleeDmg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayerMeleeDmg.Name = "PlayerMeleeDmg";
-            this.PlayerMeleeDmg.Size = new System.Drawing.Size(120, 22);
+            this.PlayerMeleeDmg.Size = new System.Drawing.Size(90, 20);
             this.PlayerMeleeDmg.TabIndex = 37;
             // 
             // PlayerArmor
             // 
-            this.PlayerArmor.Location = new System.Drawing.Point(621, 140);
+            this.PlayerArmor.Location = new System.Drawing.Point(466, 114);
+            this.PlayerArmor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayerArmor.Name = "PlayerArmor";
-            this.PlayerArmor.Size = new System.Drawing.Size(120, 22);
+            this.PlayerArmor.Size = new System.Drawing.Size(90, 20);
             this.PlayerArmor.TabIndex = 36;
             // 
             // Playerdmg
             // 
-            this.Playerdmg.Location = new System.Drawing.Point(621, 112);
+            this.Playerdmg.Location = new System.Drawing.Point(466, 91);
+            this.Playerdmg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Playerdmg.Name = "Playerdmg";
-            this.Playerdmg.Size = new System.Drawing.Size(120, 22);
+            this.Playerdmg.Size = new System.Drawing.Size(90, 20);
             this.Playerdmg.TabIndex = 35;
             // 
             // playerHp
             // 
-            this.playerHp.Location = new System.Drawing.Point(621, 84);
+            this.playerHp.Location = new System.Drawing.Point(466, 68);
+            this.playerHp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.playerHp.Name = "playerHp";
-            this.playerHp.Size = new System.Drawing.Size(120, 22);
+            this.playerHp.Size = new System.Drawing.Size(90, 20);
             this.playerHp.TabIndex = 34;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(484, 228);
+            this.label7.Location = new System.Drawing.Point(363, 185);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 17);
+            this.label7.Size = new System.Drawing.Size(88, 13);
             this.label7.TabIndex = 33;
             this.label7.Text = "DistWeaponDmg";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(484, 202);
+            this.label8.Location = new System.Drawing.Point(363, 164);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 17);
+            this.label8.Size = new System.Drawing.Size(99, 13);
             this.label8.TabIndex = 32;
             this.label8.Text = "MeleeWeaponDmg";
             // 
@@ -330,44 +360,49 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label9.Location = new System.Drawing.Point(482, 10);
+            this.label9.Location = new System.Drawing.Point(362, 8);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 26);
+            this.label9.Size = new System.Drawing.Size(103, 22);
             this.label9.TabIndex = 31;
             this.label9.Text = "Add  Player";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(481, 147);
+            this.label10.Location = new System.Drawing.Point(361, 119);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 17);
+            this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 30;
             this.label10.Text = "Armor";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(481, 119);
+            this.label11.Location = new System.Drawing.Point(361, 97);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 17);
+            this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 29;
             this.label11.Text = "Attack";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(481, 89);
+            this.label12.Location = new System.Drawing.Point(361, 72);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 17);
+            this.label12.Size = new System.Drawing.Size(22, 13);
             this.label12.TabIndex = 28;
             this.label12.Text = "HP";
             // 
             // AddPlayer
             // 
-            this.AddPlayer.Location = new System.Drawing.Point(516, 281);
+            this.AddPlayer.Location = new System.Drawing.Point(387, 228);
+            this.AddPlayer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddPlayer.Name = "AddPlayer";
-            this.AddPlayer.Size = new System.Drawing.Size(161, 34);
+            this.AddPlayer.Size = new System.Drawing.Size(121, 28);
             this.AddPlayer.TabIndex = 27;
             this.AddPlayer.Text = "Add Player";
             this.AddPlayer.UseVisualStyleBackColor = true;
@@ -376,24 +411,26 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(481, 59);
+            this.label13.Location = new System.Drawing.Point(361, 48);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 17);
+            this.label13.Size = new System.Drawing.Size(35, 13);
             this.label13.TabIndex = 41;
             this.label13.Text = "Name";
             // 
             // PlayerName
             // 
-            this.PlayerName.Location = new System.Drawing.Point(621, 56);
+            this.PlayerName.Location = new System.Drawing.Point(466, 46);
+            this.PlayerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayerName.Name = "PlayerName";
-            this.PlayerName.Size = new System.Drawing.Size(119, 22);
+            this.PlayerName.Size = new System.Drawing.Size(90, 20);
             this.PlayerName.TabIndex = 42;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 553);
+            this.ClientSize = new System.Drawing.Size(662, 449);
             this.Controls.Add(this.PlayerName);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.PlayerAgility);
@@ -431,6 +468,7 @@
             this.Controls.Add(this.mForce);
             this.Controls.Add(this.mHp);
             this.Controls.Add(this.b_Addmonster);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Gestion de combat";
             ((System.ComponentModel.ISupportInitialize)(this.monsterHealth)).EndInit();
