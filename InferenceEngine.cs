@@ -60,10 +60,10 @@ namespace ProjetIA
 
             // --- The verb used in the sentence induces if the target should be healed or damaged
             System.Diagnostics.Debug.WriteLine("\n// --- The verb used in the sentence induces if the target should be healed or damaged");
-            this.AddRule("r13 (action attack)$(assert(typeModif dmg))");
-            this.AddRule("r14 (action shoot)$(assert(typeModif dmg))");
-            this.AddRule("r15 (action heal)$(assert(typeModif heal))&(assert(typeAtk heal))");
-            this.AddRule("r16 (action cure)$(assert(typeModif heal)&(assert(typeAtk heal)))");
+            this.AddRule("r13 (action attacks)$(assert(typeModif dmg))");
+            this.AddRule("r14 (action shoots)$(assert(typeModif dmg))");
+            this.AddRule("r15 (action heals)$(assert(typeModif heal))&(assert(typeAtk heal))");
+            this.AddRule("r16 (action cures)$(assert(typeModif heal)&(assert(typeAtk heal)))");
 
             // --- Get the stats of the monster (from)
             System.Diagnostics.Debug.WriteLine("\n// --- Get the stats of the monster (from)");

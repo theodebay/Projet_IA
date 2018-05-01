@@ -92,19 +92,19 @@ namespace ProjetIA
             {
                 switch (word)
                 {
-                    case "attack":
+                    case "attacks":
                         action = word;
                         return action;
 
-                    case "shoot":
+                    case "shoots":
                         action = word;
                         return action;
 
-                    case "heal":
+                    case "heals":
                         action = word;
                         return action;
 
-                    case "cure":
+                    case "cures":
                         action = word;
                         return action;
 
