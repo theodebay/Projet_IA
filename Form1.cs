@@ -51,6 +51,7 @@ namespace ProjetIA
             }
 
             Monsterbox.Text = monster_list;
+            monster_list = "";
         }
 
         private void AddPlayer_Click(object sender, EventArgs e)
