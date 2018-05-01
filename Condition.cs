@@ -61,15 +61,6 @@ namespace ProjetIA
             {
                 foreach(Fact f in kb.facts)
                 {
-                    //System.Diagnostics.Debug.WriteLine("fait testé : " + f.ToString());
-                    //System.Diagnostics.Debug.Write("variables : ");
-                    foreach (string s in this.variablesNames)
-                    {
-                       // System.Diagnostics.Debug.Write(s + ", ");
-                    }
-                    //System.Diagnostics.Debug.WriteLine("");
-
-                    //System.Diagnostics.Debug.WriteLine("test: "+ f.value.Count+" // "+ this.variablesNames.Count);
                     if (f.value.Count == this.variablesNames.Count)
                     {
                         
@@ -77,8 +68,7 @@ namespace ProjetIA
                         {
                             if (!this.variables[i] && this.variablesNames[i] != f.value[i])
                             {
-                                // A part differs, condition isn't verified 
-                                //System.Diagnostics.Debug.WriteLine("partie pas identique:"+this.variablesNames[i] +"//" + f.value[i]+".");
+                                // A part differs, condition isn't verified
                                 break;
                             }
 
@@ -99,13 +89,9 @@ namespace ProjetIA
                             if (i == this.variablesNames.Count - 1 && (this.variables[i] || this.variablesNames[i] == f.value[i]))
                             {
                                 // Every parts of the condition are verrified
-                                //System.Diagnostics.Debug.WriteLine("C'est bon!");
                                 return true;
                             }
                         }
-                    } else
-                    {
-                        //System.Diagnostics.Debug.WriteLine("pas la même taille");
                     }
                 }
                 
@@ -116,9 +102,6 @@ namespace ProjetIA
             {
                 return !(subCond1.IsVerified(kb, variablesMap));
             }
-
-
-
 
             else if (op.Equals("test"))
             {
@@ -131,15 +114,18 @@ namespace ProjetIA
                 } else
                 {
                     int valTest = 0;
+
+                    // Looks for the fact (test stat)
                     foreach (Fact f in kb.facts)
                     {
-                        //Console.WriteLine(f.ToString());
                         if (f.value[0].Equals("test"))
                         {
                             valTest = Int32.Parse(f.value[1]);
                             break;
                         }
                     }
+
+                    // Do we touch the enemy?
                     if (valTest + dice > Int32.Parse(variablesMap["?armor"]))
                     {
                         return true;

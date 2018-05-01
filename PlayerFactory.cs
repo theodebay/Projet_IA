@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ProjetIA
 {
@@ -17,19 +13,19 @@ namespace ProjetIA
             this.kb = kb;
         }
 
-        public void addPlayer(string name, int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
+        public void AddPlayer(string name, int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
         {
             Player p = new Player(name, health, attack, armor, agility, baseDmgMelee, baseDmgDst);
             players.Add(p);
-            this.kb.AddFact("f" + (kb.count + 1) + " " + p.toFact());
+            this.kb.AddFact("f" + (kb.count + 1) + " " + p.ToFact());
         }
 
-        public List<Player> getList()
+        public List<Player> GetList()
         {
             return players;
         }
 
-        public Player getById(string id)
+        public Player GetById(string id)
         {
             foreach (Player p in players)
             {
@@ -41,7 +37,7 @@ namespace ProjetIA
             return null;
         }
 
-        internal void removePlayer(Player p)
+        internal void RemovePlayer(Player p)
         {
             this.players.Remove(p);
         }

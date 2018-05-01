@@ -25,7 +25,6 @@ namespace ProjetIA
             {
                 if (rule.IsVerified(kb))
                 {
-                    //System.Diagnostics.Debug.WriteLine("Found one");
                     rule.Fire(kb);
                 }
             }

@@ -59,19 +59,15 @@ namespace ProjetIA
             {
                 if (!c.IsVerified(kb, variables))
                 {
-                    //if (this.name == "r19") System.Diagnostics.Debug.WriteLine("condition " + i + " non verifiée");
                     return false;
                 }
-                //if (this.name == "r20") System.Diagnostics.Debug.WriteLine("condition " + i + " verifiée");
                 i++;
             }
-            //System.Diagnostics.Debug.WriteLine("condition vérifiée");
             return true;
         }
 
         public void Fire(KnowledgeBase kb)
         {
-            //variables = new Dictionary<string, string>();
             foreach(Result r in rhs)
             {
                 System.Diagnostics.Debug.WriteLine("Rule " + this.name + " fired...");

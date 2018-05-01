@@ -32,7 +32,6 @@ namespace ProjetIA
                 // Replace ?variables with their values
                 foreach (string key in variables.Keys)
                 {
-                    //System.Diagnostics.Debug.WriteLine("Clé: "+key + " // " + variables[key]);
                     newFact = newFact.Replace(key, variables[key]);
                 }
 

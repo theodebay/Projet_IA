@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 using System.Collections.Generic;
 
 namespace ProjetIA
@@ -25,6 +26,10 @@ namespace ProjetIA
 
         public void RemoveFact(Fact fact) { this.facts.Remove(fact); }
 
+        /**
+         * Remove all the tempory facts created during the action.
+         * Only keeps the monsters.
+         **/
         public void CleanTempFacts()
         {
             List<Fact> cleanedBase = new List<Fact>();
@@ -40,6 +45,25 @@ namespace ProjetIA
             }
 
             this.facts = cleanedBase;
+        }
+
+        internal void CleanDead()
+        {
+            List<Fact> cleanedBase = new List<Fact>();
+            foreach (Fact f in facts)
+            {
+                if (Int32.Parse(f.value[2]) <= 0)
+                {
+                    System.Diagnostics.Debug.WriteLine("Cleaned dead - " + f.ToString());
+                }
+                else
+                {
+                    cleanedBase.Add(f);
+                }
+            }
+
+            this.facts = cleanedBase;
+
         }
     }
 }

@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetIA
+﻿namespace ProjetIA
 {
     class Player
     {
         public int health;
         public string name;
-
         private int armor;
         private int baseDmgMelee;
         private int attack;
@@ -28,13 +21,13 @@ namespace ProjetIA
             this.agility = agility;
         }
 
-        public string toFact()
+        public string ToFact()
         {
             string fact = ("monster " + name + " " + health + " " + armor + " " + attack + " " + baseDmgMelee + " " + "2d8 " + agility + " " + baseDmgDst + " " + "2d4");
             return fact;
         }
 
-        public string getName()
+        public string GetName()
         {
             return name;
         }

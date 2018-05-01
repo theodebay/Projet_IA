@@ -18,9 +18,7 @@ namespace ProjetIA
             for (int i = 1; i < info.Length; i++)
             {
                 this.value.Add(info[i]);
-
             }
-
         }
 
 

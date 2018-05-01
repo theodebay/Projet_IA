@@ -71,7 +71,7 @@
     <Compile Include="Result.cs" />
     <Compile Include="Rule.cs" />
     <Compile Include="RuleBase.cs" />
-    <Compile Include="Traitement_String.cs" />
+    <Compile Include="InstructionTreatment.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

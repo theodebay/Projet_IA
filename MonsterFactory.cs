@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ProjetIA
 {
@@ -19,22 +15,22 @@ namespace ProjetIA
             this.kb = kb;
         }
 
-        public int addMonster(int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
+        public int AddMonster(int health, int attack, int armor, int agility, int baseDmgMelee, int baseDmgDst)
         {
             count++;
             Monster m = new Monster(count.ToString(), health, attack, armor, agility, baseDmgMelee, baseDmgDst);
             monsters.Add(m);
             
-            this.kb.AddFact("f" + (kb.count + 1) + " " + m.toFact());
+            this.kb.AddFact("f" + (kb.count + 1) + " " + m.ToFact());
             return count;
         }
 
-        public List<Monster> getList()
+        public List<Monster> GetList()
         {
             return monsters;
         }
 
-        public Monster getById(string id)
+        public Monster GetById(string id)
         {
             foreach (Monster m in monsters)
             {
@@ -46,7 +42,7 @@ namespace ProjetIA
             return null;
         }
 
-        internal void removeMonster(Monster m)
+        internal void RemoveMonster(Monster m)
         {
             this.monsters.Remove(m);
         }

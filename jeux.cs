@@ -14,7 +14,7 @@ namespace ProjetIA
     {
         MonsterFactory monsterFactory;
         PlayerFactory playerFactory;
-        Traitement_String traitement_String;
+        InstructionTreatment traitement_String;
         InferenceEngine engine;
         public jeux(MonsterFactory monsters, PlayerFactory players, InferenceEngine curengine)
         {
@@ -22,16 +22,16 @@ namespace ProjetIA
             this.monsterFactory = monsters;
             this.playerFactory = players;
             this.engine = curengine;
-            traitement_String = new Traitement_String();
+            traitement_String = new InstructionTreatment();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("\n-------------------------------------REQUEST--------------------------------------");
             bool ok = true;
 
             // Find the attacker
-            string attacker = traitement_String.from(PlayerAction.Text, playerFactory, monsterFactory);
+            string attacker = traitement_String.From(PlayerAction.Text, playerFactory, monsterFactory);
             if (attacker == null)
             {
                 BattleInfo.Text = "Can't find attacker";
@@ -44,7 +44,7 @@ namespace ProjetIA
             }
 
             // Find the target
-            string defender = traitement_String.to(PlayerAction.Text, playerFactory, monsterFactory);
+            string defender = traitement_String.To(PlayerAction.Text, playerFactory, monsterFactory);
             if (attacker == null)
             {
                 BattleInfo.Text = "Can't find defender";
@@ -57,7 +57,7 @@ namespace ProjetIA
 
 
             // Find the action
-            string action = traitement_String.findAction(PlayerAction.Text);
+            string action = traitement_String.FindAction(PlayerAction.Text);
             if (action == null)
             {
                 BattleInfo.Text = "Action impossible";
@@ -71,7 +71,7 @@ namespace ProjetIA
             if (action == "attacks" || action == "shoots")
             {
                 // Find the weapon
-                string keyword = traitement_String.findWeapon(PlayerAction.Text);
+                string keyword = traitement_String.FindWeapon(PlayerAction.Text);
                 if (keyword == null)
                 {
                     BattleInfo.Text = "Weapon missing";
@@ -86,19 +86,30 @@ namespace ProjetIA
             if (ok)
             {
                 engine.TestAndFire();
-                updateEntities(BattleInfo);
+                UpdateEntities();
+                Recap();
             }
 
 
 
         }
 
-        private void updateEntities(RichTextBox battleInfo)
+        private void Recap()
+        {
+            BattleInfo.Text += "\n----------------------ENTITIES LEFT----------------------\n\n";
+            foreach (Fact f in engine.knowledgeBase.facts)
+            {
+                BattleInfo.Text += "Monster " + f.value[1] + ": " + f.ToString()+"\n";
+            }
+            BattleInfo.Text += "\n---------------------------------------------------------------------------\n\n";
+        }
+
+        private void UpdateEntities()
         {
             foreach (Fact f in engine.knowledgeBase.facts)
             {
-                Monster m = monsterFactory.getById(f.value[1]);
-                Player p = playerFactory.getById(f.value[1]);
+                Monster m = monsterFactory.GetById(f.value[1]);
+                Player p = playerFactory.GetById(f.value[1]);
 
                 if (m == null)
                 {
@@ -106,12 +117,12 @@ namespace ProjetIA
                     if (f.value[2] != p.health.ToString())
                     {
                         int val = -(p.health - Int32.Parse(f.value[2]));
-                        BattleInfo.Text += "Player " + p.name + " received " + val + " HP\n";
+                        BattleInfo.Text += "Player " + p.name + " received " + val + " HP (from " + p.health + " to " + f.value[2] + " HP)\n";
 
                         if (Int32.Parse(f.value[2]) <= 0)
                         {
                             BattleInfo.Text += "Player " + p.name + " has been slain\n";
-                            playerFactory.removePlayer(p);
+                            playerFactory.RemovePlayer(p);
                         }
                         else
                         {
@@ -130,7 +141,7 @@ namespace ProjetIA
                         if (Int32.Parse(f.value[2]) <= 0)
                         {
                             BattleInfo.Text += "Monster " + m.id + " has been slain\n";
-                            monsterFactory.removeMonster(m);
+                            monsterFactory.RemoveMonster(m);
                         }
                         else
                         {
@@ -139,17 +150,8 @@ namespace ProjetIA
                     }
                 }
             }
-            /*
-            BattleInfo.Text += "--------------------"+ "\n";
-            foreach (Monster m in monsterFactory.getList())
-            {
-                BattleInfo.Text += m.ToString() + "\n";
-            }
-            foreach (Player m in playerFactory.getList())
-            {
-                BattleInfo.Text += m.ToString() + "\n";
-            }
-            */
+
+            engine.knowledgeBase.CleanDead();
         }
     }
 }
