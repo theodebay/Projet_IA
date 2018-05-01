@@ -68,18 +68,20 @@ namespace ProjetIA
                 engine.AddFact("f" + (engine.knowledgeBase.count + 1) + " action " + action);
             }
 
-            // Find the weapon
-            string keyword = traitement_String.findWeapon(PlayerAction.Text);
-            if (keyword == null)
+            if (action == "attack" || action == "shoot")
             {
-                BattleInfo.Text = "Weapon missing";
-                ok = false;
+                // Find the weapon
+                string keyword = traitement_String.findWeapon(PlayerAction.Text);
+                if (keyword == null)
+                {
+                    BattleInfo.Text = "Weapon missing";
+                    ok = false;
+                }
+                else
+                {
+                    engine.AddFact("f" + (engine.knowledgeBase.count + 1) + " weapon " + keyword);
+                }
             }
-            else
-            {
-                engine.AddFact("f" + (engine.knowledgeBase.count + 1) + " weapon " + keyword);
-            }
-
 
             if (ok)
             {
