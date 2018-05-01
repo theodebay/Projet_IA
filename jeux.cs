@@ -68,7 +68,7 @@ namespace ProjetIA
                 engine.AddFact("f" + (engine.knowledgeBase.count + 1) + " action " + action);
             }
 
-            if (action == "attack" || action == "shoot")
+            if (action == "attacks" || action == "shoots")
             {
                 // Find the weapon
                 string keyword = traitement_String.findWeapon(PlayerAction.Text);
