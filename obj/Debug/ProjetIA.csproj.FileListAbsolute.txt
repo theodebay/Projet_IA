@@ -19,3 +19,14 @@ C:\Users\debay\Desktop\Projet_ia\Projet_IA\bin\Debug\ProjetIA.exe.config
 C:\Users\debay\Desktop\Projet_ia\Projet_IA\bin\Debug\ProjetIA.exe
 C:\Users\debay\Desktop\Projet_ia\Projet_IA\bin\Debug\ProjetIA.pdb
 C:\Users\debay\Desktop\Projet_ia\Projet_IA\obj\Debug\ProjetIA.jeux.resources
+D:\Documents\Cours UQAC\ProjetIA3\bin\Debug\ProjetIA.exe.config
+D:\Documents\Cours UQAC\ProjetIA3\bin\Debug\ProjetIA.exe
+D:\Documents\Cours UQAC\ProjetIA3\bin\Debug\ProjetIA.pdb
+D:\Documents\Cours UQAC\ProjetIA3\obj\Debug\ProjetIA.csprojResolveAssemblyReference.cache
+D:\Documents\Cours UQAC\ProjetIA3\obj\Debug\ProjetIA.Form1.resources
+D:\Documents\Cours UQAC\ProjetIA3\obj\Debug\ProjetIA.jeux.resources
+D:\Documents\Cours UQAC\ProjetIA3\obj\Debug\ProjetIA.Properties.Resources.resources
+D:\Documents\Cours UQAC\ProjetIA3\obj\Debug\ProjetIA.csproj.GenerateResource.Cache
+D:\Documents\Cours UQAC\ProjetIA3\obj\Debug\ProjetIA.csproj.CoreCompileInputs.cache
+D:\Documents\Cours UQAC\ProjetIA3\obj\Debug\ProjetIA.exe
+D:\Documents\Cours UQAC\ProjetIA3\obj\Debug\ProjetIA.pdb
